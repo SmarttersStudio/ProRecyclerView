@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+//
+//    task generateJavadocs(type: Javadoc) {
+//        source = android.sourceSets.main.java.srcDirs classpath +=
+//                project.files(android.getBootClasspath() .join(File.pathSeparator))
+//    }
+//    task generateJavadocsJar(type: Jar) {
+//        from generateJavadocs.destinationDir classifier 'javadoc'
+//    }
+//
+//    generateJavadocsJar.dependsOn generateJavadocs
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'com.airbnb.android:lottie:3.0.2'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-alpha05'
+    implementation 'com.facebook.shimmer:shimmer:0.4.0@aar'
+}
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="myRecyclerVIew">
+        <attr name="empty_asset" format="string" />
+        <attr name="error_asset" format="string"/>
+        <attr name="empty_text" format="string"/>
+        <attr name="error_text" format="string"/>
+        <attr format="reference" name="mainLayoutId"/>
+    </declare-styleable>
+</resources>
