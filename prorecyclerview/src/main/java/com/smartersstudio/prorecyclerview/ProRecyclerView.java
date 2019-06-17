@@ -22,7 +22,7 @@ import com.facebook.shimmer.ShimmerFrameLayout;
 
 import java.util.Objects;
 
-public class MyRecyclerView extends RelativeLayout {
+public class ProRecyclerView extends RelativeLayout {
     protected int ITEM_LEFT_TO_LOAD_MORE = 10;
     private Context context;
     private String emptyMessage, errorMessage, emptyAsset, errorAsset;
@@ -36,24 +36,24 @@ public class MyRecyclerView extends RelativeLayout {
     private ShimmerFrameLayout shimmerLayout;
     private LinearLayout loaderContainer;
 
-    public MyRecyclerView(Context context) {
+    public ProRecyclerView(Context context) {
         super(context);
         initView(context);
     }
 
-    public MyRecyclerView(Context context, @Nullable AttributeSet attrs) {
+    public ProRecyclerView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         initAttributes(context, attrs);
         initView(context);
     }
 
-    public MyRecyclerView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public ProRecyclerView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initAttributes(context, attrs);
         initView(context);
     }
 
-    public MyRecyclerView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public ProRecyclerView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         initAttributes(context, attrs);
         initView(context);

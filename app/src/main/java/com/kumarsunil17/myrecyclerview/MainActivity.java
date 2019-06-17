@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.smartersstudio.prorecyclerview.MyRecyclerView;
+import com.smartersstudio.prorecyclerview.ProRecyclerView;
 import com.smartersstudio.prorecyclerview.OnMoreListener;
 
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    MyRecyclerView recyclerView;
+    ProRecyclerView recyclerView;
     List<String> l;
 
     @Override
