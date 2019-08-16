@@ -138,24 +138,39 @@ public class ProRecyclerView extends RelativeLayout {
         emptyText.setText(resId);
     }
     public  void showRecycler(){
-        refresh.setVisibility(VISIBLE);
+       hideEmpty();
+       hideError();
+       hideLoader();
+       refresh.setVisibility(VISIBLE);
     }
     public void hideRecycler(){
         refresh.setVisibility(GONE);
     }
     public  void showEmpty(){
+        hideError();
+        hideLoader();
+        hideRecycler();
         emptyLayout.setVisibility(VISIBLE);
     }
     public void hideEmpty(){
+        hideLoader();
+        hideLoader();
+        hideError();
         emptyLayout.setVisibility(GONE);
     }
     public  void showError(){
+        hideLoader();
+        hideEmpty();
+        hideRecycler();
         errorLayout.setVisibility(VISIBLE);
     }
     public void hideError(){
         errorLayout.setVisibility(GONE);
     }
     public  void showLoader(){
+        hideRecycler();
+        hideEmpty();
+        hideError();
         loaderLayout.setVisibility(VISIBLE);
         shimmerLayout.startShimmer();
     }
