@@ -36,6 +36,18 @@ public class ProRecyclerView extends RelativeLayout {
     private ShimmerFrameLayout shimmerLayout;
     private LinearLayout loaderContainer;
 
+    public Button getRetryButton(){
+        return this.errorRetry;
+    }
+    public Button getReloadButton(){
+        return this.emptyReload;
+    }
+     public TextView getEmptyTextView(){
+        return this.emptyText;
+    }
+     public TextView getErrorTextView(){
+        return this.errorText;
+    }
     public ProRecyclerView(Context context) {
         super(context);
         initView(context);
